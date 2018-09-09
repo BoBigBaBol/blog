@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绘制圆</title>
+    <style>
+        div{
+            background-color: rgba(0, 0, 255, 0.3);
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var div;
+            var startX;
+            var startY;
+            document.onmousedown = function(event){
+                //鼠标按下事件
+                div = document.createElement('div');
+                //设置位置,保留位置是为了设置宽高
+                startX = event.clientX;
+                startY = event.clientY;
+                div.style.left = event.clientX + 'px';
+                div.style.top = event.clientY + 'px';
+                document.body.appendChild(div);
+            }
+            document.onmousemove = function(event){
+                //设置宽高
+                if(div){
+                    div.style.width = event.clientX - startX +'px';
+                    div.style.height = event.clientY - startY +'px';
+                }
+            }
+            document.onmouseup = function(event){
+                div = null;
+            }
+        }
+    </script>
+</head>
+<body style="text-align: center;">
+    按下鼠标绘制，移动鼠标改变的大小
+</body>
+</html>
