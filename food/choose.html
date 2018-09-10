@@ -33,10 +33,10 @@
             top: 500px;
         }
     </style>
-<script>
-    window.onload = function(){
-        //获取元素
-        var box = document.getElementById('box');
+    <script>
+        window.onload = function(){
+         //获取元素
+         var box = document.getElementById('box');
         var btn = document.getElementById('btn');
         var img = document.getElementsByTagName('img')[0];   
         var h2 = document.getElementsByTagName('h2')[0];
@@ -52,6 +52,22 @@
         //开始事件
         btn.onclick = function(){
             var len= arr.length;
+            //图片预加载
+            var images = new Array();  
+            function preload() {  
+                for (i = 0; i < len; i++) {  
+                    images[i] = new Image()  
+                    images[i].src = arr[i].src;  
+                }  
+            }  
+            preload(arr[0].src,
+                arr[1].src,
+                arr[2].src,
+                arr[3].src,
+                arr[4].src,
+                arr[5].src,
+                arr[6].src,
+                arr[7].src);  
         //监视按钮的状态
         if(this.value==="开始"){
                 //定时器
@@ -67,9 +83,8 @@
             clearInterval(timeId);
             this.value="开始";
         };
-        }
-    }
-</script>
+        }}
+    </script>
 </head>
 <body>
     <div id="box">
