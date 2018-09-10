@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择困难症福音</title>
+    <style>
+        #box{
+            width: 600px;
+            height: 300px;
+            margin:0 auto;
+            text-align: center;
+            position: relative;
+        }
+        img{
+            width: 640px;
+            height: 420px;
+            line-height: 420px;
+        }
+        #btn{
+            width: 150px;
+            padding: 0;
+            background-color: #ffeded;
+            border: 1px solid #FF0036;
+            color: #FF0036;
+            height: 38px;
+            line-height: 38px;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+            left: 225px;
+            top: 500px;
+        }
+    </style>
+<script>
+    window.onload = function(){
+        //获取元素
+        var box = document.getElementById('box');
+        var btn = document.getElementById('btn');
+        var img = document.getElementsByTagName('img')[0];   
+        var h2 = document.getElementsByTagName('h2')[0];
+        //创建数组，模拟数据
+        var arr = [{name:"青椒肉丝",src:"./images/f1.jpg"},
+                {name:"小酥肉",src:"./images/f2.jpg"},
+                {name:"干锅虾",src:"./images/f3.jpg"},
+                {name:"小笼包",src:"./images/f4.jpg"},
+                {name:"菜肉馄饨",src:"./images/f5.jpg"},
+                {name:"干锅土豆片",src:"./images/f6.jpg"},
+                {name:"烤肉",src:"./images/f7.jpg"},
+                {name:"快餐",src:"./images/f8.jpg"}]
+        //开始事件
+        btn.onclick = function(){
+            var len= arr.length;
+        //监视按钮的状态
+        if(this.value==="开始"){
+                //定时器
+                timeId=setInterval(function () {
+                //获取随机菜品
+                var random = parseInt(Math.random()*len);
+                h2.innerText = arr[random].name;
+                img.src = arr[random].src;
+            },100);
+            this.value="停止";
+        }else{
+                //清除计时器
+            clearInterval(timeId);
+            this.value="开始";
+        };
+        }
+    }
+</script>
+</head>
+<body>
+    <div id="box">
+        <img src="" alt="请开始你的表演">
+        <h2></h2>
+        <input type="button" id="btn" value="开始"/>
+    </div>
+</body>
+</html>
