@@ -6,3 +6,4 @@
 * 随机选择的demo
 * 随机选择菜品的demo
 * css3做相册动画的demo
+* 方块移动的demo
