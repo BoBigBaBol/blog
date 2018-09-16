@@ -7,3 +7,5 @@
 * 随机选择菜品的demo
 * css3做相册动画的demo
 * 方块移动的demo
+* Html5原生拖拽的demo
+* canvas绘制钟表的demo
