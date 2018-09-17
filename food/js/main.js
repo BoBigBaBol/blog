@@ -1,42 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>选择困难症福音</title>
-    <style>
-        #box{
-            width: 600px;
-            height: 300px;
-            margin:0 auto;
-            text-align: center;
-            position: relative;
-        }
-        img{
-            width: 640px;
-            height: 420px;
-            line-height: 420px;
-        }
-        #btn{
-            width: 150px;
-            padding: 0;
-            background-color: #ffeded;
-            border: 1px solid #FF0036;
-            color: #FF0036;
-            height: 38px;
-            line-height: 38px;
-            font-size: 16px;
-            cursor: pointer;
-            position: absolute;
-            left: 225px;
-            top: 500px;
-        }
-    </style>
-<script>
-    window.onload = function(){
-        //获取元素
-        var box = document.getElementById('box');
+window.onload = function(){
+    //获取元素
+    var box = document.getElementById('box');
     var btn = document.getElementById('btn');
     var img = document.getElementsByTagName('img')[0];   
     var h2 = document.getElementsByTagName('h2')[0];
@@ -82,15 +46,6 @@
             //清除计时器
         clearInterval(timeId);
         this.value="开始";
-    };
-    }}
-</script>
-</head>
-<body>
-    <div id="box">
-        <img src="" alt="请开始你的表演">
-        <h2></h2>
-        <input type="button" id="btn" value="开始"/>
-    </div>
-</body>
-</html>
+    }
+    }
+}
