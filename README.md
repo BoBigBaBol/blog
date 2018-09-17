@@ -9,3 +9,4 @@
 * 方块移动的demo
 * Html5原生拖拽的demo
 * canvas绘制钟表的demo
+* video应用的demo
