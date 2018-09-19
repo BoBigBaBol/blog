@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* 消除空节点的影响 */
+    font-size: 0;
+}
+
+.wrap {
+    width: 350px;
+    margin: 100px 0 0 150px;
+    border: 2px solid #b4a078;
+    position: relative;
+}
+
+.shop {
+    position: relative;
+}
+
+.shade {
+    position: absolute;
+    left: 0;top: 0;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 0, 255, 0.1);
+    cursor: move;
+    display: none;
+}
+
+.detial {
+    width: 400px;
+    height: 400px;
+    border: 2px solid #b4a078;
+    position: absolute;
+    top:-20px;
+    left: 400px;
+    overflow: hidden;
+    display: none;
+}
