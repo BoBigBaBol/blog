@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>开关控件</title>
+    <script src="./jquery-3.3.1.min.js"></script>
+    <style>
+        .switch {
+            width: 60px;
+            height: 25px;
+            line-height: 25px;
+            border-radius: 15px;
+            background-color: #ccc;
+            color: #fff;
+            font-size: 12px;
+            cursor: pointer;
+            position: relative;
+        }
+        .ball {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            top: 2px;left: 1px;
+        }
+        span {
+            width: 60px;
+            display: inline-block;
+            position: absolute;
+            z-index: 0;
+            padding-left: 25px;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('.switch').on('click','span',function(){
+                if($(this).html()=='关闭'){
+                    $(this).css({
+                        'paddingLeft':10,
+                    });
+                    $(this).html('开启');
+                    $(this).parent().css('background','#5cb85c');
+                    $(this).prev().animate({
+                        'left':38
+                    },300);
+                }
+                else if($(this).html()=='开启'){
+                    $(this).css({
+                        'paddingLeft':25,
+                    });
+                    $(this).html('关闭');
+                    $(this).parent().css('background','');
+                    $(this).prev().animate({
+                        'left':2
+                    },300);
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="switch">
+        <div class="ball"></div>
+        <span>关闭</span>
+    </div>
+</body>
+</html>
