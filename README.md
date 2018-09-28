@@ -10,3 +10,5 @@
 * Html5原生拖拽的demo
 * canvas绘制钟表的demo
 * video应用的demo
+* 商品放大镜的demo
+* 导航栏顺滑隐藏和回顶部的demo
